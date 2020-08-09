@@ -1,0 +1,138 @@
+.motorcycle {
+  padding: 0 0 110px 0;
+}
+
+.motorcycle__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 50%;
+  max-height: 1115px;
+  height: 100%;
+  background: $Orange;
+}
+
+.motorcycle__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.motorcycle__picture {
+  display: inline;
+  z-index: 2;
+  max-width: 638px;
+}
+
+.motorcycle__title {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  color: #151515;
+  font-size: 120px;
+  line-height: 106px;
+  font-weight: 700;
+  transform: translateX(-35px) translateY(40px);
+
+  span {
+    color: $White;
+  }
+}
+
+.scroll {
+  margin-top: 220px;
+}
+
+.specifications {
+  padding: 175px 0 0 0;
+}
+
+.specifications__wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1528px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.specification__block {
+  max-width: 510px;
+  color: $White;
+}
+
+.h3-title {
+  margin-bottom: 45px;
+  font-size: 52px;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.specification__text {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -2px;
+
+}
+
+.text-mb40 {
+  margin-bottom: 40px;
+}
+
+.text-mb25 {
+  margin-bottom: 25px;
+}
+
+.button {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -1px;
+  text-decoration: underline;
+  color: $Orange;
+}
+
+.specification__motorcycle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 682px;
+  width: 90%;
+}
+
+.specification__motorcycle__picture {
+  transform: translateY(55px) translateX(55px);
+}
+
+.specification__motorcycle-title {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  font-size: 264px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $White;
+  background-image: url(../img/text-overlay.png);
+  background-position: -146px -295px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: translateY(-30px);
+}
+
+.specification__stats {
+  width: 800px;
+  padding: 100px 0;
+}
+
+p {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -2px;
+  color: $White;
+}
