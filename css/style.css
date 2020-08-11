@@ -18,6 +18,7 @@ body {
   position: relative;
   background-color: #060606;
   font-family: 'Josefin Sans', sans-serif;
+  color: #ffffff;
 }
 
 .header {
@@ -104,8 +105,9 @@ body {
   margin-top: 220px;
 }
 
+/* 1 Section Motorcycle END */
 .specifications {
-  padding: 175px 0 0 0;
+  padding: 175px 0 100px 0;
 }
 
 .specifications__wrapper {
@@ -196,15 +198,204 @@ body {
 }
 
 .specification__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 800px;
-  padding: 100px 0;
+  margin-top: 100px;
 }
 
-p {
+#circle {
+  width: 173px;
+  height: 173px;
   font-size: 48px;
   line-height: 1.2;
   font-weight: 300;
   letter-spacing: -2px;
+  color: #ffffff;
+  border: 1px solid red;
+}
+
+/* 2 Section Specifications END */
+.about_wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 320px 1fr;
+      grid-template-columns: 1fr 320px 1fr;
+  -ms-grid-rows: 1130px;
+      grid-template-rows: 1130px;
+  grid-gap: 20px;
+  max-width: 1214px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.comfort__block {
+  border: 1px solid red;
+}
+
+.about-moto__block {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fcb300), to(#fcb402));
+  background: linear-gradient(#fcb300, #fcb402);
+  border: 1px solid red;
+}
+
+.performance__block {
+  border: 1px solid red;
+}
+
+.block-vert-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.h4-title {
+  margin-bottom: 35px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about__text {
+  padding: 0 80px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -1px;
+  text-indent: 5px;
+}
+
+.about__circle-href {
+  width: 40px;
+  height: 40px;
+  margin: 50px auto 0;
+  background: #fcb300;
+  border-radius: 50%;
+}
+
+.about-moto__block__img {
+  width: 100%;
+}
+
+/* 3 Section About END */
+.power {
+  padding: 255px 0 125px 0;
+}
+
+.power__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  max-width: 1154px;
+  margin: 0 auto;
+}
+
+.power__block__text {
+  padding-top: 60px;
+}
+
+.power-title {
+  margin-bottom: 30px;
+}
+
+.power__text {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.motorcycle-rotate__block {
+  position: absolute;
+  right: -250px;
+}
+
+.power__newsletter {
+  position: absolute;
+  top: 240px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -1px;
+  text-decoration: underline;
+}
+
+.newsletter-line {
+  position: absolute;
+  top: 245px;
+  right: calc(100% + 10px);
+  max-width: 462px;
+  width: calc(30vw - 25%);
+  height: 3px;
+  background: #fcb300;
+}
+
+.power__bottom {
+  margin-top: 565px;
+}
+
+.power__social-href {
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.contact-social__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__text {
+  margin-right: 20px;
+  font: 500 16px 'Poppins', sans-serif;
+}
+
+.social-href {
+  margin-left: 20px;
   color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

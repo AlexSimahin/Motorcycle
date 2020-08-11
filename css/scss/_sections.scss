@@ -45,8 +45,10 @@
   margin-top: 220px;
 }
 
+/* 1 Section Motorcycle END */
+
 .specifications {
-  padding: 175px 0 0 0;
+  padding: 175px 0 100px 0;
 }
 
 .specifications__wrapper {
@@ -75,7 +77,6 @@
   line-height: 1.2;
   font-weight: 300;
   letter-spacing: -2px;
-
 }
 
 .text-mb40 {
@@ -125,14 +126,147 @@
 }
 
 .specification__stats {
+  display: flex;
+  justify-content: space-between;
   width: 800px;
-  padding: 100px 0;
+  margin-top: 100px;
 }
 
-p {
+#circle {
+  width: 173px;
+  height: 173px;
   font-size: 48px;
   line-height: 1.2;
   font-weight: 300;
   letter-spacing: -2px;
+  color: $White;
+  border: 1px solid red;
+}
+
+/* 2 Section Specifications END */
+
+.about_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 320px 1fr;
+  grid-template-rows: 1130px;
+  grid-gap: 20px;
+  max-width: 1214px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.comfort__block {
+  border: 1px solid red;
+}
+
+.about-moto__block {
+  background: linear-gradient($Orange, #fcb402);
+  border: 1px solid red;
+}
+
+.performance__block {
+  border: 1px solid red;
+}
+
+.block-vert-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.h4-title {
+  margin-bottom: 35px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about__text {
+  padding: 0 80px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -1px;
+  text-indent: 5px;
+}
+
+.about__circle-href {
+  width: 40px;
+  height: 40px;
+  margin: 50px auto 0;
+  background: $Orange;
+  border-radius: 50%;
+}
+
+.about-moto__block__img {
+  width: 100%;
+}
+
+/* 3 Section About END */
+
+.power {
+  padding: 255px 0 125px 0;
+}
+
+.power__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1154px;
+  margin: 0 auto;
+}
+
+.power__block__text {
+  padding-top: 60px;
+}
+
+.power-title {
+  margin-bottom: 30px;
+}
+
+.power__text {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.motorcycle-rotate__block {
+  position: absolute;
+  right: -250px;
+}
+
+.power__newsletter {
+  position: absolute;
+  top: 240px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: $White;
+  letter-spacing: -1px;
+  text-decoration: underline;
+}
+
+.newsletter-line {
+  position: absolute;
+  top: 245px;
+  right: calc(100% + 10px);
+  max-width: 462px;
+  width: calc(30vw - 25%);
+  height: 3px;
+  background: $Orange;
+}
+
+.power__bottom {
+  margin-top: 565px;
+}
+
+.power__social-href {
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
   color: $White;
 }

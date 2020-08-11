@@ -1,0 +1,25 @@
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.contact-social__block {
+    display: flex;
+}
+
+.social__block {
+    display: flex;
+    align-items: center;
+}
+
+.social__text {
+    margin-right: 20px;
+    font: 500 16px 'Poppins', sans-serif;
+}
+
+.social-href {
+    margin-left: 20px;
+    color: $White;
+}
