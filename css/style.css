@@ -377,6 +377,10 @@ body {
   color: #ffffff;
 }
 
+.footer {
+  padding-bottom: 80px;
+}
+
 .footer__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -557,5 +561,23 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: #ffffff;
+}
+
+.phone-block {
+  padding-left: 85px;
+}
+
+.copyright {
+  margin-top: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: #aeb0b5;
+}
+
+.text-underline {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

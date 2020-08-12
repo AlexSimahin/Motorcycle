@@ -1,3 +1,7 @@
+.footer {
+    padding-bottom: 80px;
+}
+
 .footer__wrapper {
     display: flex;
     flex-direction: column;
@@ -135,4 +139,20 @@
     font-size: 14px;
     font-weight: 300;
     color: $White;
+}
+
+.phone-block {
+    padding-left: 85px;
+}
+
+.copyright {
+    margin-top: 50px;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 300;
+    color: $FooterGrey;
+}
+
+.text-underline {
+    text-decoration: underline;
 }
