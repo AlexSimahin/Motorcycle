@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Poppins:wght@500&display=swap");
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 10px 0px 20px 0px #363636;
+          box-shadow: inset 10px 0px 20px 0px #363636;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fcb300;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +32,7 @@ body {
   background-color: #060606;
   font-family: 'Josefin Sans', sans-serif;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 .header {
@@ -367,9 +381,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 1170px;
   margin: 0 auto;
 }
@@ -378,6 +393,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
 }
 
 .social__block {
@@ -387,6 +409,68 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 51px;
+  font-size: 24px;
+}
+
+.form__block {
+  max-width: 375px;
+  width: 100%;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border: 1px solid #373737;
+  border-radius: 2px;
+}
+
+.subscribe-text {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #aeb0b5;
+}
+
+.email {
+  max-width: 300px;
+  width: 100%;
+  padding: 18px 0 18px 24px;
+  font: 400 16px 'Josefin Sans', sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+.email::-webkit-input-placeholder {
+  font: 400 16px 'Josefin Sans', sans-serif;
+  color: #aeb0b5;
+}
+
+.email:-ms-input-placeholder {
+  font: 400 16px 'Josefin Sans', sans-serif;
+  color: #aeb0b5;
+}
+
+.email::-ms-input-placeholder {
+  font: 400 16px 'Josefin Sans', sans-serif;
+  color: #aeb0b5;
+}
+
+.email::placeholder {
+  font: 400 16px 'Josefin Sans', sans-serif;
+  color: #aeb0b5;
+}
+
+.btn-submit {
+  padding: 18px 18px 18px 18px;
+  font: 400 16px 'Josefin Sans', sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .social__text {
@@ -396,6 +480,82 @@ body {
 
 .social-href {
   margin-left: 20px;
+  color: #ffffff;
+}
+
+.footer-line {
+  max-width: 1170px;
+  width: 100%;
+  height: 1px;
+  margin: 60px 0 45px;
+  background: #2c2c2c;
+}
+
+/* ------------ */
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.h5-title {
+  margin-bottom: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #aeb0b5;
+  text-transform: uppercase;
+}
+
+.menu-href {
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.list-item {
+  margin-bottom: 18px;
+}
+
+.list-item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.contact-us__block {
+  max-width: 475px;
+  width: 100%;
+}
+
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__subtitle {
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #aeb0b5;
+}
+
+.contacts-href {
+  font-size: 14px;
+  font-weight: 300;
   color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,5 +2,18 @@
 
 $White: #ffffff;
 $Orange: #fcb300;
+$FooterGrey: #aeb0b5;
 
-// font-family: 'Poppins', sans-serif
+// Custom Scrollbars
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 10px 0px 20px 0px #363636;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $Orange;
+}
