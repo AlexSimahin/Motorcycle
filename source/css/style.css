@@ -58,8 +58,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .header .menu-button:hover {
@@ -70,8 +70,8 @@ body {
 .menu-button__arrow {
   width: 12px;
   height: 12px;
-  -webkit-animation: fade-down 2s infinite;
-          animation: fade-down 2s infinite;
+  -webkit-animation: fade-down 3s cubic-bezier(0, 0.46, 0.58, 1) infinite;
+          animation: fade-down 3s cubic-bezier(0, 0.46, 0.58, 1) infinite;
 }
 
 @-webkit-keyframes fade-down {
@@ -153,6 +153,65 @@ body {
 
 .scroll {
   margin-top: 220px;
+  cursor: pointer;
+  -webkit-animation: up-and-down 6s linear infinite;
+          animation: up-and-down 6s linear infinite;
+}
+
+@-webkit-keyframes up-and-down {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0.75;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes up-and-down {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0.75;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 /* 1 Section Motorcycle END */
@@ -169,13 +228,26 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1528px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .specification__block {
-  max-width: 510px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.specification__block__text {
+  max-width: 485px;
+  width: 100%;
   color: #ffffff;
+  -webkit-transform: translateX(188px);
+          transform: translateX(188px);
 }
 
 .h3-title {
@@ -271,16 +343,19 @@ body {
 
 /* 2 Section Specifications END */
 .about_wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 320px 1fr;
-      grid-template-columns: 1fr 320px 1fr;
-  -ms-grid-rows: 1130px;
-      grid-template-rows: 1130px;
-  grid-gap: 20px;
-  max-width: 1214px;
+  max-width: 1528px;
   width: 100%;
   margin: 0 auto;
+}
+
+.about__block-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(auto, 284px) 320px minmax(auto, 284px);
+      grid-template-columns: minmax(auto, 284px) 320px minmax(auto, 284px);
+  -ms-grid-rows: 1130px;
+      grid-template-rows: 1130px;
+  grid-gap: 134px;
 }
 
 .comfort__block {
@@ -322,7 +397,6 @@ body {
 }
 
 .about__text {
-  padding: 0 80px;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;

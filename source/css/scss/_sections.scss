@@ -43,6 +43,37 @@
 
 .scroll {
   margin-top: 220px;
+  cursor: pointer;
+  animation: up-and-down 6s linear infinite;
+}
+
+$RangeTranslateY: 30px;
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(-$RangeTranslateY);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateY($RangeTranslateY);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 /* 1 Section Motorcycle END */
@@ -56,13 +87,21 @@
   justify-content: space-around;
   flex-wrap: wrap;
   max-width: 1528px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .specification__block {
-  max-width: 510px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.specification__block__text {
+  max-width: 485px;
+  width: 100%;
   color: $White;
+  transform: translateX(188px);
 }
 
 .h3-title {
@@ -146,13 +185,16 @@
 /* 2 Section Specifications END */
 
 .about_wrapper {
-  display: grid;
-  grid-template-columns: 1fr 320px 1fr;
-  grid-template-rows: 1130px;
-  grid-gap: 20px;
-  max-width: 1214px;
+  max-width: 1528px;
   width: 100%;
   margin: 0 auto;
+}
+
+.about__block-grid {
+  display: grid;
+  grid-template-columns: minmax(auto, 284px) 320px minmax(auto, 284px);
+  grid-template-rows: 1130px;
+  grid-gap: 134px;
 }
 
 .comfort__block {
@@ -184,7 +226,6 @@
 }
 
 .about__text {
-  padding: 0 80px;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
