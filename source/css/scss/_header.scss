@@ -1,17 +1,35 @@
 .header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 50px 0 200px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0 200px;
 
-    .menu-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .menu-button:hover {
+    transform: scale(1.2);
+  }
 }
 
 .menu-button__arrow {
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
+  animation: fade-down 2s infinite;
+}
+
+@keyframes fade-down {
+  form {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
 }

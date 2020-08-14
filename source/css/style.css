@@ -57,11 +57,47 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.header .menu-button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .menu-button__arrow {
   width: 12px;
   height: 12px;
+  -webkit-animation: fade-down 2s infinite;
+          animation: fade-down 2s infinite;
+}
+
+@-webkit-keyframes fade-down {
+  form {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-down {
+  form {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
 }
 
 .motorcycle {
