@@ -185,29 +185,27 @@ $RangeTranslateY: 30px;
 /* 2 Section Specifications END */
 
 .about_wrapper {
-  max-width: 1528px;
+  max-width: 1154px;
   width: 100%;
   margin: 0 auto;
 }
 
 .about__block-grid {
-  display: grid;
-  grid-template-columns: minmax(auto, 284px) 320px minmax(auto, 284px);
-  grid-template-rows: 1130px;
-  grid-gap: 134px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .comfort__block {
-  border: 1px solid red;
+  max-width: 295px;
 }
 
 .about-moto__block {
+  height: 1130px;
   background: linear-gradient($Orange, #fcb402);
-  border: 1px solid red;
 }
 
 .performance__block {
-  border: 1px solid red;
+  max-width: 295px;
 }
 
 .block-vert-align {
@@ -234,11 +232,31 @@ $RangeTranslateY: 30px;
 }
 
 .about__circle-href {
-  width: 40px;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
   margin: 50px auto 0;
   background: $Orange;
   border-radius: 50%;
+}
+
+.about__circle-href::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px dashed $White;
+  border-radius: 50%;
+  transform: rotate(180deg);
+  // background: url(../img/border-dashed.png) no-repeat;
+}
+
+.plus-href {
+  font-size: 21px;
+  font-weight: 400;
+  color: $White;
 }
 
 .about-moto__block__img {
