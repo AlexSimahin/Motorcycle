@@ -278,6 +278,114 @@ body {
   }
 }
 
+/* --- Special Info in IMG ---*/
+.motorcycle__inform__full-control {
+  position: absolute;
+  -webkit-transform: translate(-53px, -10px);
+          transform: translate(-53px, -10px);
+  z-index: 99;
+  display: block;
+}
+
+.motorcycle__inform__comfort {
+  position: absolute;
+  -webkit-transform: translate(244px, 126px);
+          transform: translate(244px, 126px);
+  z-index: 99;
+  display: block;
+}
+
+.motorcycle__inform__stability {
+  position: absolute;
+  -webkit-transform: translate(359px, 295px);
+          transform: translate(359px, 295px);
+  z-index: 99;
+  display: block;
+}
+
+.info-text {
+  margin-bottom: 4px;
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: end;
+}
+
+.info-block__lines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-block__lines-height-1 {
+  height: 36px;
+}
+
+.info-block__lines-height-2 {
+  height: 12px;
+}
+
+.info-block__lines-height-3 {
+  height: 0px;
+}
+
+.info-block__lines-black {
+  border-top: 2px solid #3b3b3b;
+  border-left: 2px solid #3b3b3b;
+}
+
+.info-block__black-width-1 {
+  width: 100px;
+}
+
+.info-block__black-width-2 {
+  width: 274px;
+}
+
+.info-block__black-width-3 {
+  width: 100px;
+}
+
+.info-block__lines-white {
+  width: 55px;
+  border-top: 2px solid #ffffff;
+}
+
+.motorcycle__inform__circle-href {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 16px;
+  height: 16px;
+  background: #fcb300;
+  border-radius: 50%;
+  -webkit-transform: translate(-7px, 8px);
+          transform: translate(-7px, 8px);
+  cursor: pointer;
+}
+
+.motorcycle__inform__circle-href::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 1px dashed #3b3b3b;
+  border-radius: 50%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.motorcycle__inform__circle-href__stability-fix {
+  -webkit-transform: translate(-21px, -7px);
+          transform: translate(-21px, -7px);
+}
+
 /* 1 Section Motorcycle END */
 .specifications {
   padding: 175px 0 100px 0;
@@ -485,7 +593,7 @@ body {
 }
 
 .about__circle-href::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 40px;
   height: 40px;
