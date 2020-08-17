@@ -890,6 +890,7 @@ body {
           flex-direction: column;
   position: relative;
   max-width: 1154px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1151,9 +1152,26 @@ body {
 }
 
 @media screen and (max-width: 1400px) {
+  .specifications__wrapper {
+    width: 90%;
+  }
   .specification__block__text {
-    -webkit-transform: translateX(calc(188px - 25%));
-            transform: translateX(calc(188px - 25%));
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .power__wrapper {
+    width: 90%;
+  }
+  .newsletter-line {
+    width: calc(26vw - 25%);
+  }
+  .power__block__text {
+    position: relative;
+    z-index: 2;
+  }
+  .motorcycle-rotate__block {
+    z-index: 1;
+    right: -8%;
   }
 }
 /*# sourceMappingURL=style.css.map */

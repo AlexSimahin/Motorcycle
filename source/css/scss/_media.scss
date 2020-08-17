@@ -1,6 +1,30 @@
 @media screen and (max-width: 1400px) {
+    $widthSectionWrapper: 90%;
+
+    .specifications__wrapper {
+        width: $widthSectionWrapper;
+    }
+
     .specification__block__text {
-        transform: translateX(calc(188px - 25%));
+        transform: translateX(0);
+    }
+
+    .power__wrapper {
+        width: $widthSectionWrapper;
+    }
+
+    .newsletter-line {
+        width: calc(26vw - 25%);
+    }
+
+    .power__block__text {
+        position: relative;
+        z-index: 2;
+    }
+
+    .motorcycle-rotate__block {
+        z-index: 1;
+        right: -8%;
     }
 
 }
