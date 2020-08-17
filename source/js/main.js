@@ -46,9 +46,13 @@ closeBtn.addEventListener("click", () => {
 // ---------------------
 
 const numbs = document.querySelectorAll(".numb");
+const specificationStats = document.querySelector(".specification__stats");
+const special = document.querySelectorAll(".progress");
 let counter1 = 0;
 let counter2 = 0;
 let counter3 = [0, 1];
+
+console.log(special);
 
 const circleProgress = () => {
   setInterval(() => {
@@ -84,4 +88,12 @@ const circleProgress = () => {
   }, 60);
 };
 
-circleProgress();
+setTimeout(() => {
+  specificationStats.style.display = "flex";
+  circleProgress();
+  for (let i = 0; i < special.length; i++) {
+    special[i].style.animationPlayState = "running";
+  }
+}, 2000);
+
+// dots.classList.animation = "dot 4s linear both";

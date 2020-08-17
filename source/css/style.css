@@ -516,15 +516,14 @@ body {
   background-image: url(../img/text-overlay.png);
   background-position: -146px -295px;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
 }
 
 .specification__stats {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -648,6 +647,8 @@ body {
   z-index: 1;
   -webkit-animation: left 2s linear both;
           animation: left 2s linear both;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 @-webkit-keyframes left {
@@ -683,6 +684,8 @@ body {
           animation: right 1.5s linear both;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 @-webkit-keyframes right {
@@ -725,8 +728,6 @@ body {
   width: 50%;
   height: 10px;
   margin-top: -5px;
-  -webkit-animation: dot 4s linear both;
-          animation: dot 4s linear both;
   -webkit-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
 }
@@ -1147,5 +1148,12 @@ body {
 
 .text-underline {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1400px) {
+  .specification__block__text {
+    -webkit-transform: translateX(calc(188px - 25%));
+            transform: translateX(calc(188px - 25%));
+  }
 }
 /*# sourceMappingURL=style.css.map */
