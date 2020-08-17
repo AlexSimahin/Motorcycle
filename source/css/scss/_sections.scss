@@ -94,12 +94,17 @@ $RangeTranslateY: 30px;
 
 .motorcycle__inform__stability {
   position: absolute;
-  transform: translate(359px, 295px);
+  transform: translate(360px, 295px);
   z-index: 99;
   display: block;
 }
 
-.motorcycle__inform__performance {}
+.motorcycle__inform__performance {
+  position: absolute;
+  transform: translate(29px, 387px);
+  z-index: 99;
+  display: block;
+}
 
 .info-text {
   margin-bottom: 4px;
@@ -125,6 +130,14 @@ $RangeTranslateY: 30px;
   height: 0px;
 }
 
+.info-block__lines-height-4 {
+  height: 36px;
+}
+
+.reverse-block {
+  transform: rotate3d(1, 0, 0, 180deg);
+}
+
 .info-block__lines-black {
   border-top: 2px solid #3b3b3b;
   border-left: 2px solid #3b3b3b;
@@ -139,6 +152,10 @@ $RangeTranslateY: 30px;
 }
 
 .info-block__black-width-3 {
+  width: 100px;
+}
+
+.info-block__black-width-4 {
   width: 100px;
 }
 
@@ -171,7 +188,15 @@ $RangeTranslateY: 30px;
 }
 
 .motorcycle__inform__circle-href__stability-fix {
-  transform: translate(-21px, -7px);
+  transform: translate(-25px, -7px);
+}
+
+.reverse-block-href-translate {
+  transform: translate(-7px, -60px);
+}
+
+.reverse-block-text-translate {
+  transform: translate(0px, 33px);
 }
 
 /* 1 Section Motorcycle END */
@@ -257,7 +282,6 @@ $RangeTranslateY: 30px;
   background-image: url(../img/text-overlay.png);
   background-position: -146px -295px;
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   transform: translateY(-30px);
 }
@@ -269,16 +293,199 @@ $RangeTranslateY: 30px;
   margin-top: 100px;
 }
 
-#circle {
-  width: 173px;
-  height: 173px;
+/* CIRCLE ------------------- */
+
+// #circle {
+//   width: 173px;
+//   height: 173px;
+//   font-size: 48px;
+//   line-height: 1.2;
+//   font-weight: 300;
+//   letter-spacing: -2px;
+//   color: $White;
+//   border: 1px solid red;
+// }
+
+.circular-container {
+  width: 174px;
+  height: 174px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular {
+  width: 174px;
+  height: 174px;
+  position: relative;
+}
+
+.circular .inner,
+.circular .outer,
+.circular .circle {
+  position: absolute;
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circular .inner {
+  top: 50%;
+  left: 50%;
+  height: 155px;
+  width: 155px;
+  transform: translate(-50%, -50%);
+  background-color: #060606;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circular .circle {
+  z-index: 1;
+  box-shadow: none;
+}
+
+.circular .numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  z-index: 10;
   font-size: 48px;
   line-height: 1.2;
   font-weight: 300;
   letter-spacing: -2px;
   color: $White;
-  border: 1px solid red;
 }
+
+.numb-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 70%);
+  z-index: 11;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -2px;
+  color: $Orange;
+}
+
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  //background: #fff;
+  border-radius: 100%;
+  clip: rect(0px, 174px, 174px, 87px);
+}
+
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0px, 87px, 174px, 0px);
+}
+
+.progress-2 {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background: #2e2e2e;
+}
+
+.circle .bar .progress {
+  background: $Orange;
+}
+
+.dot span {
+  background: transparent;
+}
+
+.circle .left .progress {
+  z-index: 1;
+  animation: left 2s linear both;
+}
+
+@keyframes left {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.circle .right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+
+.circle .right .progress {
+  animation: right 1.5s linear both;
+  animation-delay: 2s;
+}
+
+@keyframes right {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(125deg);
+  }
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.circle .dot {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 10px;
+  margin-top: -5px;
+  animation: dot 4s linear both;
+  transform-origin: 0% 50%;
+}
+
+.circle .dot span {
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+@keyframes dot {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+    z-index: 4;
+  }
+
+  100% {
+    transform: rotate(270deg);
+    z-index: 4;
+  }
+}
+
+/* END CIRCLE ------------------- */
 
 /* 2 Section Specifications END */
 

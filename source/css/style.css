@@ -297,8 +297,16 @@ body {
 
 .motorcycle__inform__stability {
   position: absolute;
-  -webkit-transform: translate(359px, 295px);
-          transform: translate(359px, 295px);
+  -webkit-transform: translate(360px, 295px);
+          transform: translate(360px, 295px);
+  z-index: 99;
+  display: block;
+}
+
+.motorcycle__inform__performance {
+  position: absolute;
+  -webkit-transform: translate(29px, 387px);
+          transform: translate(29px, 387px);
   z-index: 99;
   display: block;
 }
@@ -329,6 +337,15 @@ body {
   height: 0px;
 }
 
+.info-block__lines-height-4 {
+  height: 36px;
+}
+
+.reverse-block {
+  -webkit-transform: rotate3d(1, 0, 0, 180deg);
+          transform: rotate3d(1, 0, 0, 180deg);
+}
+
 .info-block__lines-black {
   border-top: 2px solid #3b3b3b;
   border-left: 2px solid #3b3b3b;
@@ -343,6 +360,10 @@ body {
 }
 
 .info-block__black-width-3 {
+  width: 100px;
+}
+
+.info-block__black-width-4 {
   width: 100px;
 }
 
@@ -382,8 +403,18 @@ body {
 }
 
 .motorcycle__inform__circle-href__stability-fix {
-  -webkit-transform: translate(-21px, -7px);
-          transform: translate(-21px, -7px);
+  -webkit-transform: translate(-25px, -7px);
+          transform: translate(-25px, -7px);
+}
+
+.reverse-block-href-translate {
+  -webkit-transform: translate(-7px, -60px);
+          transform: translate(-7px, -60px);
+}
+
+.reverse-block-text-translate {
+  -webkit-transform: translate(0px, 33px);
+          transform: translate(0px, 33px);
 }
 
 /* 1 Section Motorcycle END */
@@ -485,7 +516,6 @@ body {
   background-image: url(../img/text-overlay.png);
   background-position: -146px -295px;
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
@@ -502,17 +532,248 @@ body {
   margin-top: 100px;
 }
 
-#circle {
-  width: 173px;
-  height: 173px;
+/* CIRCLE ------------------- */
+.circular-container {
+  width: 174px;
+  height: 174px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.circular {
+  width: 174px;
+  height: 174px;
+  position: relative;
+}
+
+.circular .inner,
+.circular .outer,
+.circular .circle {
+  position: absolute;
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circular .inner {
+  top: 50%;
+  left: 50%;
+  height: 155px;
+  width: 155px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #060606;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circular .circle {
+  z-index: 1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.circular .numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+  z-index: 10;
   font-size: 48px;
   line-height: 1.2;
   font-weight: 300;
   letter-spacing: -2px;
   color: #ffffff;
-  border: 1px solid red;
 }
 
+.numb-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 70%);
+          transform: translate(-50%, 70%);
+  z-index: 11;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -2px;
+  color: #fcb300;
+}
+
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0px, 174px, 174px, 87px);
+}
+
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0px, 87px, 174px, 0px);
+}
+
+.progress-2 {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background: #2e2e2e;
+}
+
+.circle .bar .progress {
+  background: #fcb300;
+}
+
+.dot span {
+  background: transparent;
+}
+
+.circle .left .progress {
+  z-index: 1;
+  -webkit-animation: left 2s linear both;
+          animation: left 2s linear both;
+}
+
+@-webkit-keyframes left {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes left {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+.circle .right {
+  z-index: 3;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.circle .right .progress {
+  -webkit-animation: right 1.5s linear both;
+          animation: right 1.5s linear both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes right {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(125deg);
+            transform: rotate(125deg);
+  }
+}
+
+@keyframes right {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(125deg);
+            transform: rotate(125deg);
+  }
+}
+
+.rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.circle .dot {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 10px;
+  margin-top: -5px;
+  -webkit-animation: dot 4s linear both;
+          animation: dot 4s linear both;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.circle .dot span {
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes dot {
+  0% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    z-index: 4;
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    z-index: 4;
+  }
+}
+
+@keyframes dot {
+  0% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    z-index: 4;
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    z-index: 4;
+  }
+}
+
+/* END CIRCLE ------------------- */
 /* 2 Section Specifications END */
 .about_wrapper {
   max-width: 1154px;
