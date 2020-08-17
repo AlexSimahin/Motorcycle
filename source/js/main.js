@@ -48,13 +48,40 @@ closeBtn.addEventListener("click", () => {
 const numbs = document.querySelectorAll(".numb");
 let counter1 = 0;
 let counter2 = 0;
-let counter3 = 0;
+let counter3 = [0, 1];
 
-setInterval(() => {
-  if (counter1 < 106) {
-    counter1 += 2;
-    numbs[0].textContent = `${counter1}`;
-  } else {
-    clearInterval();
-  }
-}, 70);
+const circleProgress = () => {
+  setInterval(() => {
+    if (counter1 < 106) {
+      counter1 += 2;
+      numbs[0].textContent = `${counter1}`;
+    } else {
+      clearInterval();
+    }
+  }, 75);
+
+  setInterval(() => {
+    if (counter2 < 229) {
+      counter2 += 4;
+      numbs[1].textContent = `${counter2}`;
+    } else {
+      clearInterval();
+      numbs[1].textContent = 229;
+    }
+  }, 65);
+
+  setInterval(() => {
+    if (counter3[0] == 5 && counter3[1] == 7) {
+      clearInterval();
+    } else {
+      if (counter3[1] === 10) {
+        counter3[0]++;
+        counter3[1] = 0;
+      }
+      counter3[1]++;
+      numbs[2].textContent = `${counter3[0]},${counter3[1]}`;
+    }
+  }, 60);
+};
+
+circleProgress();
