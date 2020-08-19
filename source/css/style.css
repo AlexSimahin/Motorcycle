@@ -1151,6 +1151,12 @@ body {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1600px) {
+  .specification__motorcycle {
+    margin-right: 50px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .specifications__wrapper {
     width: 90%;
@@ -1158,6 +1164,9 @@ body {
   .specification__block__text {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  .specification__motorcycle {
+    margin-right: 0;
   }
   .power__wrapper {
     width: 90%;
@@ -1172,6 +1181,70 @@ body {
   .motorcycle-rotate__block {
     z-index: 1;
     right: -8%;
+  }
+  .footer__wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .specification__block__text {
+    width: 33%;
+  }
+  .about_wrapper {
+    width: calc(100vw - 50px);
+  }
+  .comfort__block,
+  .performance__block {
+    min-width: 200px;
+    padding: 0 20px;
+  }
+  .about-moto__block__img {
+    min-width: 200px;
+  }
+  .motorcycle-rotate__block {
+    z-index: 1;
+    right: -3%;
+    top: 112px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .specification__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .specification__block__text {
+    width: 100%;
+  }
+  .specification__motorcycle {
+    margin-top: 60px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .motorcycle-rotate__block img {
+    width: calc(100vw - 30px);
+  }
+  .footer__wrapper {
+    width: 60%;
+  }
+  .contact-social__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

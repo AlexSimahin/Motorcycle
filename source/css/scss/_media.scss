@@ -1,30 +1,105 @@
+@media screen and (max-width: 1600px) {
+  .specification__motorcycle {
+    margin-right: 50px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
-    $widthSectionWrapper: 90%;
+  $widthSectionWrapper: 90%;
 
-    .specifications__wrapper {
-        width: $widthSectionWrapper;
-    }
+  .specifications__wrapper {
+    width: $widthSectionWrapper;
+  }
 
-    .specification__block__text {
-        transform: translateX(0);
-    }
+  .specification__block__text {
+    transform: translateX(0);
+  }
 
-    .power__wrapper {
-        width: $widthSectionWrapper;
-    }
+  .specification__motorcycle {
+    margin-right: 0;
+  }
 
-    .newsletter-line {
-        width: calc(26vw - 25%);
-    }
+  .power__wrapper {
+    width: $widthSectionWrapper;
+  }
 
-    .power__block__text {
-        position: relative;
-        z-index: 2;
-    }
+  .newsletter-line {
+    width: calc(26vw - 25%);
+  }
 
-    .motorcycle-rotate__block {
-        z-index: 1;
-        right: -8%;
-    }
+  .power__block__text {
+    position: relative;
+    z-index: 2;
+  }
 
+  .motorcycle-rotate__block {
+    z-index: 1;
+    right: -8%;
+  }
+
+  .footer__wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .specification__block__text {
+    width: 33%;
+  }
+
+  .about_wrapper {
+    width: calc(100vw - 50px);
+  }
+
+  .comfort__block,
+  .performance__block {
+    min-width: 200px;
+    padding: 0 20px;
+  }
+
+  .about-moto__block__img {
+    min-width: 200px;
+  }
+
+  .motorcycle-rotate__block {
+    z-index: 1;
+    right: -3%;
+    top: 112px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .specification__block {
+    flex-direction: column;
+  }
+
+  .specification__block__text {
+    width: 100%;
+  }
+
+  .specification__motorcycle {
+    margin-top: 60px;
+    align-self: center;
+  }
+
+  .motorcycle-rotate__block {
+    //top: calc(100vw + 10px);
+  }
+
+  .motorcycle-rotate__block img {
+    width: calc(100vw - 30px);
+  }
+
+  .footer__wrapper {
+    width: 60%;
+  }
+
+  .contact-social__block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+  }
 }
